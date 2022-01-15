@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MeeshoAssignment</string>
-    <string name="scan">Scan to start</string>
+    <string name="scan">Scan Now</string>
+    <string name="end_session">End Session</string>
+    <string name="invalid_qr">Invalid Data in QR</string>
+
 </resources>
