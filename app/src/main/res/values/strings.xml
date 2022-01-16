@@ -14,4 +14,6 @@
     <string name="something_went_wrong">Something went wrong! Try again later.</string>
     <string name="data_synced">Data Sent To Server Successfully!</string>
     <string name="total_cost">"Total cost: "</string>
+    <string name="total_time">Total Time: </string>
+    <string name="end_time">End Time: </string>
 </resources>

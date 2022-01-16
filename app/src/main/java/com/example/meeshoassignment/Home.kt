@@ -23,12 +23,15 @@ import com.example.meeshoassignment.utils.Utils
 import com.example.meeshoassignment.viewmodel.SubmitSessionViewModel
 import org.json.JSONArray
 import org.json.JSONObject
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.math.cos
 
 
 class Home : AppCompatActivity(), View.OnClickListener {
     lateinit var binding: ActivityMainBinding
     var isSessionActive = false
+     var endtime: Long = 0
     lateinit var brReceiver: BroadcastReceiver
     lateinit var  sessionModel:SessionDetailsModel
     private lateinit var submitSessionViewModel: SubmitSessionViewModel
@@ -89,8 +92,9 @@ class Home : AppCompatActivity(), View.OnClickListener {
 
 
                 } else {
+                     endtime=(System.currentTimeMillis());
                     Utils.showProgressDialog(this)
-                    submitSessionViewModel.SendToServer(sessionModel,binding.tvTime.text.toString(),(System.currentTimeMillis()/1000).toString())
+                    submitSessionViewModel.SendToServer(sessionModel,binding.tvTime.text.toString(),endtime.toString())
                     setObserver()
 
 
@@ -118,10 +122,11 @@ class Home : AppCompatActivity(), View.OnClickListener {
                     isSessionActive = false
                     stopService(Intent(this, CountUpService::class.java))
                     updateButtons(false)
-                    var cost=submitSessionViewModel.calculateTimeInMin(binding.tvTime.text.toString())*sessionModel.price_per_min
+                    var timeMins=submitSessionViewModel.calculateTimeInMin(binding.tvTime.text.toString())
+                    var cost=timeMins*sessionModel.price_per_min
                     binding.tvTime.setText(getString(R.string.total_cost)+ cost)
-                    binding.tvid.setText("")
-                    binding.tvlocationDetail.setText("")
+                    binding.tvid.setText(getString(R.string.total_time)+timeMins+" "+getString(R.string.min))
+                    binding.tvlocationDetail.setText(getString(R.string.end_time)+" "+SimpleDateFormat("HH:mm", Locale.US).format(endtime))
                     binding.tvprice.setText("")
                 }
                 MyResponse.Status.LOADING -> {
