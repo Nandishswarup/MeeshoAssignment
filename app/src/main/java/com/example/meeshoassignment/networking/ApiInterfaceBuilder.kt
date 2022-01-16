@@ -10,7 +10,7 @@ class ApiInterfaceBuilder  {
     companion object
     {
 
-        var baseUrl="";
+        var baseUrl="https://en478jh796m7w.x.pipedream.net/";
         var apiInterFace: ApiInterace? = null
         var okHttpClient: OkHttpClient? = null
 

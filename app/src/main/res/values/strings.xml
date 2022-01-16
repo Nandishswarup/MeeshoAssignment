@@ -9,5 +9,9 @@
     <string name="Timer">Timer</string>
     <string name="min">Min</string>
     <string name="duration">" Duration: "</string>
-
+    <string name="connect_internet">Internet connection not available. Connect to internet first.</string>
+    <string name="poor_internet">Not able to Sync due to no or poor internet. Make sure your internet is working fine!</string>
+    <string name="something_went_wrong">Something went wrong! Try again later.</string>
+    <string name="data_synced">Data Sent To Server Successfully!</string>
+    <string name="total_cost">"Total cost: "</string>
 </resources>

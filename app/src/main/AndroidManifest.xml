@@ -3,6 +3,8 @@
     package="com.example.meeshoassignment">
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -21,8 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleScannerActivity"/>
-        <service android:name=".CountUpService"/>
+        <activity android:name=".ScannerActivity"/>
+        <service android:name=".service.CountUpService"/>
     </application>
 
 </manifest>

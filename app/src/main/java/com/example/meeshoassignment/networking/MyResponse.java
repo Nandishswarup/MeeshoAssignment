@@ -14,8 +14,6 @@ public class MyResponse<T> implements Serializable {
     @NonNull
     public final Status status;
     @Nullable
-    public final T data;
-    @Nullable
     public final String message;
 
 
@@ -23,26 +21,24 @@ public class MyResponse<T> implements Serializable {
     {
 
         this.status = null;
-        this.data = null;
-        this.message = null;
+         this.message = null;
      }
 
-    private MyResponse(@NonNull Status status, @Nullable T data, @Nullable String message) {
+    public MyResponse(@NonNull Status status, @Nullable String message) {
         this.status = status;
-        this.data = data;
-        this.message = message;
+         this.message = message;
     }
 
-    public static <T> MyResponse<T> success(@NonNull T data) {
-        return new MyResponse<>(Status.SUCCESS, data, null);
+    public static <T> MyResponse<T> success() {
+        return new MyResponse<>(Status.SUCCESS, null);
     }
 
-    public static <T> MyResponse<T> error(String msg, @Nullable T data ) {
-        return new MyResponse<>(Status.ERROR, data, msg);
+    public static <T> MyResponse<T> error(String msg) {
+        return new MyResponse<>(Status.ERROR, msg);
     }
 
-    public static <T> MyResponse<T> loading(@Nullable T data ) {
-        return new MyResponse<>(Status.LOADING, data, null);
+    public static <T> MyResponse<T> loading() {
+        return new MyResponse<>(Status.LOADING, null);
     }
 
 

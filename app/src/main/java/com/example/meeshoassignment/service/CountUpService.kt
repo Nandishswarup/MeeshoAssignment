@@ -1,4 +1,4 @@
-package com.example.meeshoassignment
+package com.example.meeshoassignment.service
 
 import android.app.*
 import android.content.Intent
@@ -8,7 +8,9 @@ import android.os.Handler
 import android.os.IBinder
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.example.meeshoassignment.AppConstants.Constants
+import com.example.meeshoassignment.utils.Constants
+import com.example.meeshoassignment.Home
+import com.example.meeshoassignment.R
 import com.example.meeshoassignment.model.SessionDetailsModel
 import java.util.*
 
