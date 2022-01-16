@@ -3,5 +3,11 @@
     <string name="scan">Scan Now</string>
     <string name="end_session">End Session</string>
     <string name="invalid_qr">Invalid Data in QR</string>
+    <string name="location_id">Location Id:</string>
+    <string name="location_detail">Location Details:</string>
+    <string name="price">Price:</string>
+    <string name="Timer">Timer</string>
+    <string name="min">Min</string>
+    <string name="duration">" Duration: "</string>
 
 </resources>
