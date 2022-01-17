@@ -8,6 +8,7 @@ class Constants {
         const val VALUE = "value"
         const val NOTIFICATION_ID = 201
         const val SCANNER_RESULT = 202
+         const val REQUEST_CAMERA_PERMISSION = 200
 
 
     }

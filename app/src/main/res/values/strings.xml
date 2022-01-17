@@ -16,4 +16,5 @@
     <string name="total_cost">"Total cost: "</string>
     <string name="total_time">Total Time: </string>
     <string name="end_time">End Time: </string>
+    <string name="camera_permission_required">CAMERA PERMISSION REQUIRED</string>
 </resources>
