@@ -7,6 +7,7 @@ import com.example.interviewassignment.networking.ApiManagger
 import com.example.meeshoassignment.model.SessionDetailsModel
 import com.example.meeshoassignment.model.SubmitSessionModel
 import com.example.meeshoassignment.networking.MyResponse
+import kotlin.math.roundToInt
 
 class SubmitSessionViewModel : ViewModel() {
     var submitSessionModel = MutableLiveData<MyResponse<SubmitSessionModel>>()
@@ -35,7 +36,7 @@ class SubmitSessionViewModel : ViewModel() {
         var hour=splittime[0]
         var minute=splittime[1]
         var second=splittime[2]
-        return (hour.toInt()*60)+minute.toInt()+(second.toInt()/60)
+        return ((hour.toInt()*60)+minute.toInt()+(Math.ceil(second.toDouble()/60))).toInt()
     }
 
 
